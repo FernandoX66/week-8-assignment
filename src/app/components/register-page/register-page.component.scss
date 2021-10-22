@@ -1,0 +1,89 @@
+$fontFamily: "Nunito", sans-serif;
+$whiteColor: #fafafa;
+$disabledButtonColor: #7d8adf;
+$lightColor: #4a59b9;
+$mediumColor: #3748b5;
+$invalidAlertColor: #f8e2e2;
+$invalidInputColor: #c04f4f;
+$invalidFontColor: #941414;
+
+.form-div {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 450px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  form {
+    background-color: $whiteColor;
+    padding: 40px;
+    border-radius: 5px;
+    width: 100%;
+    box-shadow: 0 0 15px #00000075;
+
+    h1 {
+      color: $mediumColor;
+      margin: 0 0 12px 0;
+      text-align: center;
+    }
+
+    label {
+      margin-top: 18px;
+      margin-bottom: 7px;
+      display: block;
+    }
+
+    input {
+      font: {
+        family: $fontFamily;
+        size: 16px;
+      }
+      padding: 8px 10px;
+      width: 100%;
+      border: 1px solid rgb(170, 170, 170);
+      border-radius: 5px;
+    }
+
+    input.ng-invalid.ng-touched {
+      border: 2px solid $invalidInputColor;
+    }
+
+    .error-alert {
+      background-color: $invalidAlertColor;
+      border-radius: 3px;
+
+      p {
+        margin: 0;
+        padding: 7px 10px;
+        color: $invalidFontColor;
+      }
+    }
+
+    .register-button {
+      font: {
+        family: $fontFamily;
+        weight: bold;
+        size: 16px;
+      }
+      background-color: $mediumColor;
+      color: $whiteColor;
+      margin-top: 35px;
+      padding: 8px 20px;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .register-button:hover {
+      background-color: $lightColor;
+      cursor: pointer;
+    }
+
+    .register-button:disabled {
+      cursor: unset;
+      background-color: $disabledButtonColor;
+    }
+  }
+}

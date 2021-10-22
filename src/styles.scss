@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+$fontFamily: "Nunito", sans-serif;
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #435def;
+  font-family: $fontFamily;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
