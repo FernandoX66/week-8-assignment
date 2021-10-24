@@ -1,0 +1,24 @@
+<header>
+  <nav class="container">
+    <a routerLink="/home"><span>App</span>laudo</a>
+    <div class="user-div">
+      <img
+        src="../../../assets/images/profile.png"
+        alt="profile-image"
+        (click)="showUserCard()"
+      />
+      <div class="user-card" *ngIf="displayUserCard">
+        <div class="user-image">
+          <img src="../../../assets/images/profile.png" alt="profile-image" />
+        </div>
+        <div class="user-information">
+          <p>
+            <b>{{ currentUser.name }}</b>
+          </p>
+          <p>{{ currentUser.email }}</p>
+          <button (click)="logOut()">Logout</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

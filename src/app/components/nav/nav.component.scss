@@ -1,0 +1,78 @@
+$fontFamily: "Nunito", sans-serif;
+$whiteColor: #ffffff;
+$darkColor: #3444a8;
+$mediumColor: #3748b5;
+$lightColor: #4a59b9;
+
+header {
+  background-color: $darkColor;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.568);
+
+  nav {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+      color: $whiteColor;
+      font-size: 26px;
+
+      span {
+        font-weight: bold;
+      }
+    }
+
+    .user-div {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      img {
+        width: 40px;
+      }
+
+      img:hover {
+        cursor: pointer;
+      }
+
+      .user-card {
+        background-color: white;
+        padding: 20px;
+        position: absolute;
+        width: auto;
+        top: 50px;
+        right: 0px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.308);
+        border-radius: 4px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+
+        p {
+          margin: 0 0 5px 0;
+        }
+
+        button {
+          font: {
+            family: $fontFamily;
+            weight: bold;
+            size: 15px;
+          }
+          background-color: $mediumColor;
+          color: $whiteColor;
+          margin-top: 10px;
+          border: none;
+          border-radius: 5px;
+          padding: 8px 15px;
+        }
+
+        button:hover {
+          background-color: $lightColor;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

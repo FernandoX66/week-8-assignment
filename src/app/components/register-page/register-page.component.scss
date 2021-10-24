@@ -1,4 +1,4 @@
-$fontFamily: "Nunito", sans-serif;
+$fontFamily: "Poppins", sans-serif;
 $whiteColor: #fafafa;
 $disabledButtonColor: #7d8adf;
 $lightColor: #4a59b9;
@@ -11,17 +11,21 @@ $invalidFontColor: #941414;
   margin: 0 auto;
   width: 90%;
   max-width: 450px;
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 
+  @media (min-height: 800px) {
+    height: 100vh;
+  }
+
   form {
     background-color: $whiteColor;
+    margin: 20px 0;
     padding: 40px;
     border-radius: 5px;
     width: 100%;
-    box-shadow: 0 0 15px #00000075;
+    box-shadow: 0 5px 15px #00000075;
 
     h1 {
       color: $mediumColor;
@@ -38,16 +42,27 @@ $invalidFontColor: #941414;
     input {
       font: {
         family: $fontFamily;
-        size: 16px;
+        size: 14px;
       }
       padding: 8px 10px;
       width: 100%;
-      border: 1px solid rgb(170, 170, 170);
-      border-radius: 5px;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid rgb(170, 170, 170);
+      border-radius: 2px;
+    }
+
+    input::placeholder {
+      color: rgb(179, 179, 179);
+    }
+
+    input:focus {
+      border-bottom: 1px solid rgb(89, 64, 160) !important;
+      transition: border-bottom 0.2s;
     }
 
     input.ng-invalid.ng-touched {
-      border: 2px solid $invalidInputColor;
+      border-bottom: 1px solid $invalidInputColor;
     }
 
     .error-alert {
@@ -55,8 +70,9 @@ $invalidFontColor: #941414;
       border-radius: 3px;
 
       p {
+        font-size: 13px;
         margin: 0;
-        padding: 7px 10px;
+        padding: 5px 10px;
         color: $invalidFontColor;
       }
     }
@@ -84,6 +100,20 @@ $invalidFontColor: #941414;
     .register-button:disabled {
       cursor: unset;
       background-color: $disabledButtonColor;
+    }
+
+    p {
+      margin: 25px 0 0 0;
+
+      a {
+        font-weight: bold;
+        color: rgb(114, 148, 204);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
     }
   }
 }

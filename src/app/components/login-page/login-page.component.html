@@ -1,2 +1,40 @@
-<p>login-page works!</p>
-<button routerLink="register">Register</button>
+<div class="form-div">
+  <form [formGroup]="form" (ngSubmit)="login()">
+    <h1>Login</h1>
+    <div *ngIf="form.errors?.unauthorized" class="error-alert">
+      <p>Incorrect email or password.</p>
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input
+        type="text"
+        id="email"
+        placeholder="Enter your email"
+        formControlName="email"
+      />
+      <div *ngIf="email.touched && email.invalid" class="error-alert">
+        <p *ngIf="email.errors?.required">Email is required.</p>
+      </div>
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        placeholder="Enter your password"
+        formControlName="password"
+      />
+      <div *ngIf="password.touched && password.invalid" class="error-alert">
+        <p *ngIf="password.errors?.required">Password is required.</p>
+      </div>
+    </div>
+    <button type="submit" class="login-button" [disabled]="form.invalid">
+      Login
+    </button>
+    <div>
+      <p>
+        Don't you have an account? <a routerLink="register">Register now</a>
+      </p>
+    </div>
+  </form>
+</div>

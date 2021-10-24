@@ -1,4 +1,4 @@
-$fontFamily: "Nunito", sans-serif;
+$fontFamily: "Poppins", sans-serif;
 
 html {
   box-sizing: border-box;
@@ -12,8 +12,9 @@ html {
 
 body {
   background-color: #435def;
+  background: -webkit-linear-gradient(bottom right, #9e4ac5, #5986f0);
   font-family: $fontFamily;
-  font-size: 16px;
+  font-size: 15px;
   margin: 0;
   padding: 0;
 }

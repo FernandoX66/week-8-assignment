@@ -45,26 +45,36 @@
         placeholder="Email"
         formControlName="email"
       />
-      <div *ngIf="email.touched && email.invalid" class="error-alert">
-        <p *ngIf="email.errors?.required">Email is required.</p>
+      <div *ngIf="email.invalid" class="error-alert">
+        <p *ngIf="email.touched && email.errors?.required">
+          Email is required.
+        </p>
+        <p *ngIf="email.errors?.emailPattern">
+          Email must be of the email type.
+        </p>
       </div>
     </div>
     <div>
       <label for="password">Password:</label>
       <input
-        type="text"
+        type="password"
         id="password"
         placeholder="Password"
         formControlName="password"
       />
-      <div *ngIf="password.touched && password.invalid" class="error-alert">
-        <p *ngIf="password.errors?.required">Password is required.</p>
+      <div *ngIf="password.invalid" class="error-alert">
+        <p *ngIf="password.touched && password.errors?.required">
+          Password is required.
+        </p>
+        <p *ngIf="password.errors?.passConfLength">
+          Password must be longer or equal to 8 characters.
+        </p>
       </div>
     </div>
     <div>
       <label for="password-confirmation">Password confirmation:</label>
       <input
-        type="text"
+        type="password"
         id="password-confirmation"
         placeholder="Password confirmation"
         formControlName="passwordConfirmation"
@@ -84,5 +94,8 @@
     <button [disabled]="form.invalid" class="register-button" type="submit">
       Register
     </button>
+    <div>
+      <p>Already have an account? <a routerLink="">Log in</a></p>
+    </div>
   </form>
 </div>
