@@ -11,17 +11,12 @@ $invalidFontColor: #941414;
   margin: 0 auto;
   width: 90%;
   max-width: 450px;
+  height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-
-  @media (min-height: 800px) {
-    height: 100vh;
-  }
 
   form {
     background-color: $whiteColor;
-    margin: 20px 0;
+    margin: 30px auto;
     padding: 40px;
     border-radius: 5px;
     width: 100%;
@@ -37,6 +32,10 @@ $invalidFontColor: #941414;
       margin-top: 18px;
       margin-bottom: 7px;
       display: block;
+
+      span {
+        color: rgb(136, 136, 136);
+      }
     }
 
     input {

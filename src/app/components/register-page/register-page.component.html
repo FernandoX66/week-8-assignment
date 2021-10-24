@@ -42,7 +42,7 @@
       <input
         type="text"
         id="email"
-        placeholder="Email"
+        placeholder="Example: email@domain.com"
         formControlName="email"
       />
       <div *ngIf="email.invalid" class="error-alert">
@@ -55,7 +55,9 @@
       </div>
     </div>
     <div>
-      <label for="password">Password:</label>
+      <label for="password"
+        >Password: <span>(At least 8 characters)</span></label
+      >
       <input
         type="password"
         id="password"

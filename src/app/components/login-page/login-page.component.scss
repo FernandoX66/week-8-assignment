@@ -5,6 +5,7 @@ $lightColor: #4a59b9;
 $mediumColor: #3748b5;
 $invalidAlertColor: #f8e2e2;
 $invalidInputColor: #c04f4f;
+$invalidFormColor: #bd5050;
 $invalidFontColor: #941414;
 
 .form-div {
@@ -70,6 +71,22 @@ $invalidFontColor: #941414;
         margin: 0;
         padding: 7px 10px;
         color: $invalidFontColor;
+      }
+    }
+
+    .form-error-alert {
+      border-left: 6px solid $invalidFormColor;
+      display: flex;
+      align-items: center;
+
+      .bi-exclamation-circle-fill {
+        font-size: 24px;
+        color: $invalidFormColor;
+        margin-left: 10px;
+      }
+
+      p {
+        padding: 12px 10px 7px 12px;
       }
     }
 
