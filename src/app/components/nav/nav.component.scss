@@ -1,4 +1,4 @@
-$fontFamily: "Nunito", sans-serif;
+$fontFamily: "Poppins", sans-serif;
 $whiteColor: #ffffff;
 $darkColor: #3444a8;
 $mediumColor: #3748b5;
@@ -57,8 +57,7 @@ header {
         button {
           font: {
             family: $fontFamily;
-            weight: bold;
-            size: 15px;
+            size: 14px;
           }
           background-color: $mediumColor;
           color: $whiteColor;

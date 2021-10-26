@@ -22,6 +22,12 @@ $invalidFontColor: #941414;
     width: 100%;
     box-shadow: 0 5px 15px #00000075;
 
+    .required-p {
+      margin: 20px 0 0 0;
+      color: rgb(126, 126, 126);
+      font-size: 13px;
+    }
+
     h1 {
       color: $mediumColor;
       margin: 0 0 12px 0;
@@ -84,7 +90,7 @@ $invalidFontColor: #941414;
       }
       background-color: $mediumColor;
       color: $whiteColor;
-      margin-top: 35px;
+      margin-top: 25px;
       padding: 8px 20px;
       width: 100%;
       border: none;
